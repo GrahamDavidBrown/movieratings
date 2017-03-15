@@ -1,0 +1,6 @@
+.DS_Story
+.direnv
+.envrc
+__pycache__
+secrets.py
+db sqlite3
