@@ -32,6 +32,6 @@ class Rater(models.Model):
 
 class Rating(models.Model):
     rater = models.ForeignKey(Rater, on_delete=models.CASCADE)
-    movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     rating = models.IntegerField()
     timestamp = models.IntegerField()
