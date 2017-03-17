@@ -5,16 +5,7 @@ from __future__ import unicode_literals
 from django.db import migrations
 import csv
 
-def load_raters(apps, schema_editor):
-    Rater = apps.get_model("movieratings_app", "Rater")
-    datafile_PATH = 'u.user'
 
-    with open(datafile_PATH, 'r', encoding="latin-1") as f:
-        cats = {'fieldnames': ('rater_id', 'age', 'gender', 'occupation', 'zip_code'), 'delimiter': ('|')}
-        reader = csv.DictReader(f, **cats)
-        for row in reader:
-            r = Rater(id=row['rater_id'], age=row['age'], gender=row['gender'], occupation=row['occupation'], zip_code=row['zip_code'])
-            r.save()
 
 
 class Migration(migrations.Migration):
@@ -24,5 +15,4 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(load_raters)
     ]
