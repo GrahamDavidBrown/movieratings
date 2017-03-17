@@ -12,4 +12,7 @@
 
 3. movieratings
   - a directory containing the project files and the app directory (movieratings_app)
-  - open using finder
+  - open
+
+4. movieratings_app
+  - app directory.
